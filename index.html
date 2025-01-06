@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Step 1: Enter Names -->
+        <div class="step" id="step1">
+            <h1>❤️ Proposal Time! ❤️</h1>
+            <input type="text" id="maleName" placeholder="Enter His Name" required>
+            <input type="text" id="femaleName" placeholder="Enter Her Name" required>
+            <button onclick="nextStep()">Next</button>
+        </div>
+
+        <!-- Step 2: Love Confirmation -->
+        <div class="step" id="step2" style="display: none;">
+            <h1>Do You Love Each Other?</h1>
+            <button onclick="showResult(true)">Yes</button>
+            <button onclick="showResult(false)">No</button>
+        </div>
+
+        <!-- Step 3: Result Animation -->
+        <div class="step" id="step3" style="display: none;">
+            <h1 id="resultText"></h1>
+            <div class="heart-container">
+                <div class="heart" id="heart">
+                    <span id="maleNameDisplay"></span>
+                    <span id="femaleNameDisplay"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
